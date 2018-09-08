@@ -1,0 +1,26 @@
+{
+  "name": "git7-5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:html"
+    "test:html": "nu-html-checker *.html"
+
+    "build:clean": "npm build:rimraf"
+    "build:sass": "node-sass --output-style compact -o css sass",
+      
+    "watch": "npm run watch"
+    "watch:browsersync"
+    "watch:sass": "node-sass --output-style expanded --source-map true -o css sass --watch",
+	"watch:autoprefixer": "onchange -d 100 css/style.css -- autoprefixer-cli -o css/style.prefixed.css css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "browser-sync": "^2.24.7",
+    "nu-html-checker": "^0.1.0"
+  }
+}
