@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test:html",
+    "test": "npm run test:html" && "npm run test:js",
     "test:html": "nu-html-checker *.html",
-    "test": "npm run test:js",
     "test:js": "jshint js/*.js"
   },
   "keywords": [],
